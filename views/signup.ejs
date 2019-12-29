@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6" id="signupbox">
+          <% if(msg !=''){%>
+          <p style="text-align: center;"><%= msg %></p>
+          <% } %>
+          <form action="/signup" id="EmployeeForm" method="post">
+            <h3 align="center">Sign Up</h3>
+            <div class="form-group" >
+              <label for="username">User Name:</label>
+              <input type="text" class="form-control  rounded-lg border border-primary" placeholder="Enter User Name" name="username">
+            </div>
+            <div class="form-group" >
+              <label for="email">Email:</label>
+              <input type="email" class="form-control  rounded-lg border border-primary" placeholder="Enter Email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control  rounded-lg border border-primary" placeholder="Enter password" name="password">
+            </div>
+            <div class="form-group">
+              <label for="cpwd">Confirm Password:</label>
+              <input type="password" class="form-control  rounded-lg border border-primary" placeholder="Enter Confirm password" name="cpassword">
+            </div>
+            <input type="submit" name="submit" value="Signup" class="btn btn-outline-primary" style="float: left">   
+            <p> <a href="/" style="float: right; margin-top:10px; ">Login Here</a></p>
+          </form>
+        </div> 
+      </div>
+    </div>
+  </body>
+</html>
